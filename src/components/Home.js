@@ -16,7 +16,6 @@ class Home extends Component {
 
     render() {
         const { posts } = this.state;
-        console.log(posts);
         const postList = posts.length ? (
             posts.map(post => {
                 return (
@@ -24,7 +23,7 @@ class Home extends Component {
                         <h3 className="post__title">{ post.title }</h3>
                         <p>{ post.body }</p>
                     </article>
-                )
+                );
             })
         ) : (
             <p className="message">No posts</p>
