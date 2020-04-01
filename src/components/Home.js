@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Home extends Component {
     state = {
@@ -19,10 +20,12 @@ class Home extends Component {
         const postList = posts.length ? (
             posts.map(post => {
                 return (
-                    <article className="post" key={ post.id }>
-                        <h3 className="post__title">{ post.title }</h3>
-                        <p>{ post.body }</p>
-                    </article>
+                    <Link className="post-link" to={ `/posts/${post.id}` } key={ post.id }>
+                        <article className="post" >
+                            <h3 className="post__title">{ post.title }</h3>
+                            <p>{ post.body }</p>
+                        </article>
+                    </Link>
                 );
             })
         ) : (

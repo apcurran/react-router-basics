@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     return (
         <nav className="nav">
-            <a href="" className="nav__logo">Web Dev News</a>
+            <Link to="/" className="nav__logo">Web Dev News</Link>
             <ul className="nav__list">
                 <li className="nav__item"><Link className="nav__link" to="/">Home</Link></li>
                 <li className="nav__item"><Link className="nav__link" to="/about">About</Link></li>
