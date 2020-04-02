@@ -18,12 +18,12 @@ class Post extends Component {
 
     render() {
         const post = this.state.post ? (
-            <div className="post-page">
+            <div className="post-page container">
                 <h1 className="post-title">{ this.state.post.title }</h1>
                 <p className="post-content">{ this.state.post.body }</p>
             </div>
         ) : (
-            <div className="message">Loading...</div>
+            <div className="message container">Loading...</div>
         )
 
 

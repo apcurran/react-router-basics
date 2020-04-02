@@ -8,6 +8,10 @@ body {
   font-family: sans-serif;
 }
 
+p {
+  margin-top: 1rem;
+}
+
 .nav {
   padding: 1.75rem 6rem;
   display: flex;
