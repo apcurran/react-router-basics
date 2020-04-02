@@ -7,13 +7,18 @@ class Post extends Component {
 
     async componentDidMount() {
         const id = this.props.match.params.post_id;
-        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
-        const data = await response.json();
-        console.log(data);
 
-        this.setState({
-            post: data
-        });
+        try {
+            const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+            const data = await response.json();
+    
+            this.setState({
+                post: data
+            });
+            
+        } catch (err) {
+            console.error(err);
+        }
     }
 
     render() {
